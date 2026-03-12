@@ -19,5 +19,4 @@ nav:
   - 📚 Reference Guides:
       - Python Cheatsheet: guides/github_reference.md
       - Raspberry Pi Cheatsheet: guides/rpi_bash_reference.md
-	  - BASH / Python Time Reference: guides/rpi_time_reference.md
-  - About: /../README.md
+	  - BASH and Python Time Reference: guides/rpi_time_reference.md
