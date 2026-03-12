@@ -1,0 +1,23 @@
+site_name: krsmith436 Knowledge Base
+theme:
+  name: material
+  features:
+    - navigation.tabs      # Adds a top navigation bar
+    - search.share         # Allows sharing search results
+    - content.code.copy    # Adds a "Copy" button to code blocks
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  
+nav:
+  - Home: index.md
+  - 🛠️ Technical Setup:
+      - GitHub Headless Page: setup/github_headless_page.md
+      - Pc Access to GitHub via SSH: setup/github_ssh_pc_access.md
+  - 📚 Reference Guides:
+      - Python Cheatsheet: guides/github_reference.md
+      - Raspberry Pi Cheatsheet: guides/rpi_bash_reference.md
+	  - BASH / Python Time Reference: guides/rpi_time_reference.md
+  - About: /../README.md
