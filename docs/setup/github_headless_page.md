@@ -117,11 +117,6 @@ Visit `http://127.0.0.1:8000`. You should see your categorized sidebar on the le
 
 ---
 
-
----
-
----
-
 ### 5. Connect to GitHub
 
 Create a new, empty repository on GitHub (e.g., `my-reference-docs`) and link your local project to it:
