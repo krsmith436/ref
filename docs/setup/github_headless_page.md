@@ -139,8 +139,8 @@ git push -u origin main
 
 You don't want to manually upload HTML files. Instead, use a **GitHub Action** to do the heavy lifting.
 
-1. In your repo, create a folder path: `.github/workflows/`.
-2. Create a file inside named `ci.yml` and paste a standard MkDocs deployment script (GitHub provides templates for this in the **Actions** tab).
+1. In your local repository, create a folder path: `.github/workflows/`.
+2. Create a file inside named `deploy.yml` and paste a standard MkDocs deployment script (GitHub provides templates for this in the **Actions** tab).
 3. Every time you `git push` a Markdown change to `main`, GitHub will:
 * Spin up a temporary virtual machine.
 * Install Python and MkDocs.

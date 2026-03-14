@@ -1,4 +1,5 @@
 site_name: krsmith436 Knowledge Base
+site_url: https://krsmith436.github.io/ref/
 
 theme:
   name: material
