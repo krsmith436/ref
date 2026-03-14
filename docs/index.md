@@ -9,7 +9,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 * **`ref/` (Root):** The home of the project configuration.
 * **`mkdocs.yml`**: The "brain" of the site. It controls the theme (Material), the navigation menu, and search functionality.
 * **`.github/workflows/`**: Contains the automation logic that deploys the site whenever you push an update.
-* **`.gitignore`**: Adds `site\*/` to list for MkDocs documentation.
+* **`.gitignore`**: Adds `site*/` to list for MkDocs documentation.
 * **`README.md`**: The landing page for the GitHub `ref`repository.
 
 

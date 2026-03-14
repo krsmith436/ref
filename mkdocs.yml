@@ -25,7 +25,7 @@ nav:
       - Raspberry Pi Cheatsheet: guides/rpi_bash_reference.md
       - BASH and Python Time Reference: guides/rpi_time_reference.md
       - Link - Markdown Basics: https://www.markdownguide.org/basic-syntax
-      - Link - Python-Markdown3.10.2: https://python-markdown.github.io/
+      - Link - Python-Markdown3.10.2: https://python-markdown.github.io
 
   - 🛠️ Technical Setup:
       - GitHub Headless Page: setup/github_headless_page.md
