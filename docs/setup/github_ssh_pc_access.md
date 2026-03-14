@@ -1,5 +1,4 @@
 # Windows 11 pc Access github.com Using SSH
-| 🔗 [Markdown Language Basic Syntax](https://www.markdownguide.org/basic-syntax) |
 
 ### 1. Generate an SSH key
 Right-click on PowerShell or Command Prompt and select **Run as Administrator**:

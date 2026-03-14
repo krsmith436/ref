@@ -1,5 +1,4 @@
 # Raspberry Pi Bash Reference For krsmith436
-| 🔗 [Markdown Language Basic Syntax](https://www.markdownguide.org/basic-syntax) |
 
 ## USE ALIAS TO MAKE IT AUTOMATIC
 If your Pi is "headless" (no monitor) and just sitting in a corner, you might get tired of SSHing into it just to type `git pull`.

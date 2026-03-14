@@ -1,5 +1,4 @@
 # Time Reference for krsmith436
-| 🔗 [Markdown Language Basic Syntax](https://www.markdownguide.org/basic-syntax) |
 
 On a **Raspberry Pi 5 (or any Linux-based system like Raspberry Pi OS)**, time and date formatting uses the **same format codes** as the Python `datetime` module and the Linux `strftime` function.
 Here’s a reference table of the most useful **time format codes**:

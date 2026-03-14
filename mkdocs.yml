@@ -1,6 +1,10 @@
 site_name: krsmith436 Knowledge Base
+
 theme:
   name: material
+  logo: img/logo.png
+  favicon: img/favicon.ico
+  
   features:
     - navigation.tabs      # Adds a top navigation bar
     - search.share         # Allows sharing search results
@@ -10,13 +14,19 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.emoji
   
 nav:
-  - Home: index.md
+  - 🏠 Home: index.md
+  - 🚂 Model Railroad:
+      - Simple Computer Aided Railway Modeler (SCARM): mr/scarm.md
+  - 📚 Reference Guides:
+      - GitHub Cheatsheet: guides/github_reference.md
+      - Raspberry Pi Cheatsheet: guides/rpi_bash_reference.md
+      - BASH and Python Time Reference: guides/rpi_time_reference.md
+      - Link - Markdown Basics: https://www.markdownguide.org/basic-syntax
+      - Link - Python-Markdown3.10.2: https://python-markdown.github.io/
+
   - 🛠️ Technical Setup:
       - GitHub Headless Page: setup/github_headless_page.md
       - Pc Access to GitHub via SSH: setup/github_ssh_pc_access.md
-  - 📚 Reference Guides:
-      - Python Cheatsheet: guides/github_reference.md
-      - Raspberry Pi Cheatsheet: guides/rpi_bash_reference.md
-      - BASH and Python Time Reference: guides/rpi_time_reference.md

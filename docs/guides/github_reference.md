@@ -1,7 +1,7 @@
 # GitHub For krsmith436
-| 🔗 [Markdown Language Basic Syntax](https://www.markdownguide.org/basic-syntax) |
 
-<mark>Never use "sudo" for git commands.</mark>
+!!! danger "Critical"
+    Never use "sudo" for git commands!
 
 ## DAILY COMMANDS
 - git pull: Download & Merge the latest changes from GitHub to your Pi.
