@@ -22,11 +22,11 @@ nav:
   - 🚂 Model Railroad:
       - Simple Computer Aided Railway Modeler (SCARM): mr/scarm.md
   - 📚 Reference Guides:
+      - MkDocs Cheatsheet: guides/mkdocs_reference.md
       - GitHub Cheatsheet: guides/github_reference.md
       - Raspberry Pi Cheatsheet: guides/rpi_bash_reference.md
-      - BASH and Python Time Reference: guides/rpi_time_reference.md
-      - Link - Markdown Basics: https://www.markdownguide.org/basic-syntax
-      - Link - Python-Markdown3.10.2: https://python-markdown.github.io
+      - BASH and Python Time Cheatsheet: guides/rpi_time_reference.md
+      - Markdown Cheatsheet: guides/markdown_reference.md
 
   - 🛠️ Technical Setup:
       - GitHub Headless Page: setup/github_headless_page.md

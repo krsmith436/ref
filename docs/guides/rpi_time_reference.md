@@ -5,7 +5,7 @@ Here’s a reference table of the most useful **time format codes**:
 
 ---
 
-### 🕒 Common `strftime` / `datetime` Format Codes
+### Common `strftime` / `datetime` Format Codes
 
 | Code | Meaning                        | Example                    |
 | ---- | ------------------------------ | -------------------------- |
@@ -35,7 +35,7 @@ Here’s a reference table of the most useful **time format codes**:
 
 ---
 
-### 🕒 12-hour vs 24-hour Time Format Comparison
+### 12-hour vs 24-hour Time Format Comparison
 
 | Format                   | Code | Example Output | Notes                   |
 | ------------------------ | ---- | -------------- | ----------------------- |
@@ -50,7 +50,7 @@ Here’s a reference table of the most useful **time format codes**:
 
 ---
 
-### 💻 Example (in Python)
+### Example (in Python)
 
 ```python
 from datetime import datetime
@@ -62,7 +62,7 @@ print(now.strftime("%Y-%m-%d %H:%M:%S"))
 
 ---
 
-### 🧭 Example (in Linux Shell)
+### Example (in Linux Shell)
 
 ```bash
 date +"%Y-%m-%d %H:%M:%S"
@@ -71,7 +71,7 @@ date +"%Y-%m-%d %H:%M:%S"
 
 ---
 
-### 🧭 Examples
+### Examples
 
 #### In Linux terminal:
 
@@ -90,7 +90,7 @@ print(datetime.now().strftime("%R"))
 
 ---
 
-### 💻 Examples
+### Examples
 
 #### Python:
 
@@ -122,7 +122,7 @@ date +"%r"
 
 ---
 
-### 💻 Example (Python)
+### Example (Python)
 
 ```python
 from datetime import datetime
@@ -135,18 +135,17 @@ print(now.strftime("%I:%M %p"))  # 12-hour → 07:45 PM
 
 ---
 
-### 🖥 Example (Raspberry Pi Terminal)
+### Example (Raspberry Pi Terminal)
 
 ```bash
 date +"%H:%M"     # 24-hour
 date +"%I:%M %p"  # 12-hour
 ```
 
----
+!!! tip "Tip"
+    If you dislike the leading zero in 12-hour time (`07:45 PM`), many systems support:
 
-💡 **Tip:** If you dislike the leading zero in 12-hour time (`07:45 PM`), many systems support:
-
-```
+```bash
 %-I:%M %p
 ```
 
@@ -324,7 +323,7 @@ if [ $(date +%M) -eq 0 ]; then
 fi
 ```
 
-#### ⭐ Super Useful One-Line Logger
+#### Super Useful One-Line Logger
 
 Many engineers use this pattern:
 
