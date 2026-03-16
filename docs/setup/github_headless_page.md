@@ -98,11 +98,6 @@ If you don’t want a title, use a blank string "":
     This is an admonition box without a title.
 ```
 
-Python-Markdown 3.10.2 suggests the following [Admonition types](https://python-markdown.github.io/extensions/admonition/); however, you’re free to use whatever you want:
-
-!!! hint ""
-    `attention`, `caution`, `danger`, `error`, `hint`, `important`, `note`, `tip`, and `warning`
-
 ### b. Adding `site_url`
 
 Ensure your configuration file has the correct site_url so that links and assets resolve properly once hosted.
