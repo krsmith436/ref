@@ -1,11 +1,10 @@
-# Time Reference for krsmith436
+## Time Reference for krsmith436
 
 On a **Raspberry Pi 5 (or any Linux-based system like Raspberry Pi OS)**, time and date formatting uses the **same format codes** as the Python `datetime` module and the Linux `strftime` function.
 Here’s a reference table of the most useful **time format codes**:
 
----
 
-### Common `strftime` / `datetime` Format Codes
+## Common `strftime` / `datetime` Format Codes
 
 | Code | Meaning                        | Example                    |
 | ---- | ------------------------------ | -------------------------- |
@@ -33,9 +32,8 @@ Here’s a reference table of the most useful **time format codes**:
 | `%X` | Locale time                    | `19:45:09`                 |
 | `%%` | Literal `%`                    | `%`                        |
 
----
 
-### 12-hour vs 24-hour Time Format Comparison
+## 12-hour vs 24-hour Time Format Comparison
 
 | Format                   | Code | Example Output | Notes                   |
 | ------------------------ | ---- | -------------- | ----------------------- |
@@ -48,113 +46,89 @@ Here’s a reference table of the most useful **time format codes**:
 | 24-hour (HH:MM:SS)       | `%T` | `19:45:09`     | Shortcut for `%H:%M:%S` |
 | 12-hour (HH:MM:SS AM/PM) | `%r` | `07:45:09 PM`  | Full 12-hour format     |
 
----
 
-### Example (in Python)
+## Examples (in Python)
 
-```python
-from datetime import datetime
+!!! example ""
+	```python
+	from datetime import datetime
 
-now = datetime.now()
-print(now.strftime("%Y-%m-%d %H:%M:%S"))
-# Output: 2025-11-06 19:45:09
-```
+	now = datetime.now()
 
----
+	print(now.strftime("%Y-%m-%d %H:%M:%S"))
+	# Output: 2025-11-06 19:45:09
+	```
 
-### Example (in Linux Shell)
+	```python
+	from datetime import datetime
 
-```bash
-date +"%Y-%m-%d %H:%M:%S"
-# Output: 2025-11-06 19:45:09
-```
+	now = datetime.now()
 
----
-
-### Examples
-
-#### In Linux terminal:
-
-```bash
-date +"%R"
-# Output: 19:45
-```
-
-#### In Python:
-
-```python
-from datetime import datetime
-print(datetime.now().strftime("%R"))
-# Output: 19:45
-```
-
----
-
-### Examples
-
-#### Python:
-
-```python
-from datetime import datetime
-
-now = datetime.now()
-# Hour and minute (12-hour clock)
-print(now.strftime("%I:%M %p"))  
-# Example output: 07:45 PM
-
-# Full 12-hour time with seconds
-print(now.strftime("%r"))  
-# Example output: 07:45:09 PM
-```
-
-#### Linux Shell:
-
-```bash
-# Hour and minute with AM/PM
-date +"%I:%M %p"
-# Output: 07:45 PM
-
-# Full 12-hour time with seconds
-date +"%r"
-# Output: 07:45:09 PM
-```
+	print(now.strftime("%R"))        # 24-hour → 19:45 (Shortcut for `%H:%M`)
+	print(now.strftime("%H:%M"))     # 24-hour → 19:45
+	print(now.strftime("%I:%M %p"))  # 12-hour → 07:45 PM
+	print(now.strftime("%r"))        # 12-hour → 07:45:09 PM
+	```
 
 
----
+## Examples (in Linux Shell)
 
-### Example (Python)
+!!! example ""
+	```bash
+	date +"%Y-%m-%d %H:%M:%S"
+	# Output: 2025-11-06 19:45:09
+	```
 
-```python
-from datetime import datetime
-
-now = datetime.now()
-
-print(now.strftime("%H:%M"))     # 24-hour → 19:45
-print(now.strftime("%I:%M %p"))  # 12-hour → 07:45 PM
-```
-
----
-
-### Example (Raspberry Pi Terminal)
-
-```bash
-date +"%H:%M"     # 24-hour
-date +"%I:%M %p"  # 12-hour
-```
+	```bash
+	date +"%R"        # 24-hour → 19:45 (Shortcut for `%H:%M`)
+	date +"%H:%M"     # 24-hour → 19:45
+	date +"%I:%M %p"  # 12-hour → 07:45 PM
+	date +"%r"        # 12-hour → 07:45:09 PM
+	```
 
 !!! tip "Tip"
     If you dislike the leading zero in 12-hour time (`07:45 PM`), many systems support:
 
+	```bash
+	%-I:%M %p
+	```
+
+	Example → `7:45 PM`
+
+
+## Super Useful One-Line Logger
+
+Many engineers use this pattern:
+
 ```bash
-%-I:%M %p
+echo "$(date '+%Y-%m-%d %H:%M:%S') | message" >> app.log
 ```
 
-Example → `7:45 PM`
+Example output:
 
----
+```
+2026-03-09 10:56:11 | Sensor started
+```
 
-### Here are **10 very useful `date` command tricks** for **Raspberry Pi / Linux automation scripts**. These are commonly used in **cron jobs, logging, data capture, and embedded automation**. ⚙️
+!!! tip "Raspberry Pi Pro Tip"
+	If you're doing **data logging or automation**, this format is the best overall:
 
+	```
+	%Y-%m-%d %H:%M:%S.%3N
+	```
+
+	Example:
+
+	```
+	2026-03-09 10:56:11.347
+	```
+
+	It gives **milliseconds**, which is extremely useful for debugging.
+
+## 10 Very Useful `date` command tricks
+
+ Here are **10 very useful `date` command tricks** for **Raspberry Pi / Linux automation scripts**. These are commonly used in **cron jobs, logging, data capture, and embedded automation**.
+ 
 #### 1️⃣ Current Unix Timestamp
 
 Seconds since **Jan 1, 1970**.
@@ -268,7 +242,7 @@ Example:
 date -d "+30 seconds"
 ```
 
-#### 7️⃣ Convert Unix Timestamp → Date
+#### 7️⃣ Convert Unix Timestamp To Date
 
 ```bash
 date -d @1773075892
@@ -322,34 +296,3 @@ if [ $(date +%M) -eq 0 ]; then
   echo "Top of the hour"
 fi
 ```
-
-#### Super Useful One-Line Logger
-
-Many engineers use this pattern:
-
-```bash
-echo "$(date '+%Y-%m-%d %H:%M:%S') | message" >> app.log
-```
-
-Example output:
-
-```
-2026-03-09 10:56:11 | Sensor started
-```
-
----
-
-💡 **Raspberry Pi Pro Tip:**
-If you're doing **data logging or automation**, this format is the best overall:
-
-```
-%Y-%m-%d %H:%M:%S.%3N
-```
-
-Example:
-
-```
-2026-03-09 10:56:11.347
-```
-
-It gives **milliseconds**, which is extremely useful for debugging.

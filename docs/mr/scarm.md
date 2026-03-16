@@ -1,5 +1,3 @@
-# Simple Computer Aided Railway Modeler for krsmith436
-
 | 🔗 [SCARM Home Page](https://www.scarm.info/index.php) | 
 
 ## Working with Tracks

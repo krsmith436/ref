@@ -1,4 +1,4 @@
-## 📂 The MkDocs `ref` Project for krsmith436
+## The MkDocs `ref` Project for krsmith436
 
 This is a standalone documentation repository for the Smith, Huotari & Santa Fe (SHSF) HO Model Railroad. It uses a "headless" architecture where raw Markdown files are automatically transformed into a searchable, professional website via **MkDocs** and **GitHub Pages**.
 
@@ -27,8 +27,5 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 * **Version Independent:** This repository exists separately from any code branches, acting as a permanent encyclopedia.
 * **Auto-Deployment:** No manual HTML editing. Saving a `.md` file and pushing to GitHub updates the live site automatically.
 
----
-
-### Pro-Tip: The "Quick Jump" To Search
-
-Since you are using this for personal reference, once this is set up, you can press the **`f`** key while on your live website to instantly focus the search bar—making it faster to find your notes than clicking through folders.
+!!! tip "Pro-Tip: The "Quick Jump" To Search"
+    You can press the **`f`** key while on your live website to instantly focus the search bar—making it faster to find your notes than clicking through folders.

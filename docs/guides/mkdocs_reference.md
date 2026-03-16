@@ -1,3 +1,5 @@
+| 🔗[MkDocs.org](https://www.mkdocs.org/)|
+
 To enhance your "ref" repository, you can leverage specific **Material for MkDocs** features and external plugins. Since your repository is "headless" (focusing purely on content), these additions will make finding your technical notes much faster.
 
 ### 1. Advanced Navigation & Search (mkdocs.yml)

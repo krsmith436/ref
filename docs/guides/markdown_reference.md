@@ -1,11 +1,10 @@
-# Markdown Reference for krsmith436
-|  [Markdown Basics](https://www.markdownguide.org/basic-syntax)  |  [Python-Markdown 3.10](https://python-markdown.github.io)  |
+|  🔗 [Markdown Basics](https://www.markdownguide.org/basic-syntax)  |  🔗 [Python-Markdown 3.10](https://python-markdown.github.io)  |
 
 ## Emojis
 
-🕒 💻 🧭 💡 → 🖥 ⭐ 
+🔗 📂 🕒 💻 🧭 💡 → 🖥 ⭐ ⚙️ 
 
-## Adding "Admonitions"
+## Adding "Admonitions" with MkDocs
 You can highlight "Notes" or "Warnings." Material for MkDocs has a great feature for this.
 
 With this in your `mkdocs.yml`:
@@ -33,9 +32,21 @@ If you don’t want a title, use a blank string "":
 !!! important ""
     This is an admonition box without a title.
 ```
-
-Python-Markdown 3.10.2 suggests the following [Admonition types](https://python-markdown.github.io/extensions/admonition/); however, you’re free to use whatever you want:
+#### MkDocs Admonition Types
 
 !!! hint ""
-    `attention`, `caution`, `danger`, `error`, `hint`, `important`, `note`, `tip`, and `warning`
+	| Type | Aliases | Typical Color |
+	| --- | --- | --- |
+	| **`note`** | — | Blue |
+	| **`abstract`** | `summary`, `tldr` | Light Blue |
+	| **`info`** | `todo` | Cyan |
+	| **`tip`** | `hint`, `important` | Teal |
+	| **`success`** | `check`, `done` | Green |
+	| **`question`** | `help`, `faq` | Indigo |
+	| **`warning`** | `caution`, `attention` | Orange |
+	| **`failure`** | `fail`, `missing` | Red |
+	| **`danger`** | `error` | Dark Red |
+	| **`bug`** | — | Pink |
+	| **`example`** | — | Purple |
+	| **`quote`** | `cite` | Grey |
 

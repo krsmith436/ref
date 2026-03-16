@@ -1,5 +1,3 @@
-# GitHub For krsmith436
-
 !!! danger "Critical"
     Never use "sudo" for git commands!
 

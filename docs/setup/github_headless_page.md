@@ -69,7 +69,7 @@ nav:
       - Pc Access to GitHub via SSH: setup/github_ssh_pc_access.md
 ```
 
-### 3a. Adding "Admonitions"
+### a. Adding "Admonitions"
 Since this is for reference information, you’ll likely want to highlight "Notes" or "Warnings." Material for MkDocs has a great feature for this.
 
 With this in your `mkdocs.yml`:
@@ -103,7 +103,7 @@ Python-Markdown 3.10.2 suggests the following [Admonition types](https://python-
 !!! hint ""
     `attention`, `caution`, `danger`, `error`, `hint`, `important`, `note`, `tip`, and `warning`
 
-### 3b. Adding `site_url`
+### b. Adding `site_url`
 
 Ensure your configuration file has the correct site_url so that links and assets resolve properly once hosted.
 

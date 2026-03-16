@@ -8,7 +8,9 @@ theme:
   
   features:
     - navigation.tabs      # Adds a top navigation bar
+    - navigation.top       # "Back to top" button
     - search.share         # Allows sharing search results
+    - search.highlight     # Highlight search terms on page
     - content.code.copy    # Adds a "Copy" button to code blocks
 
 markdown_extensions:
@@ -22,12 +24,11 @@ nav:
   - 🚂 Model Railroad:
       - Simple Computer Aided Railway Modeler (SCARM): mr/scarm.md
   - 📚 Reference Guides:
+      - Markdown Cheatsheet: guides/markdown_reference.md
       - MkDocs Cheatsheet: guides/mkdocs_reference.md
       - GitHub Cheatsheet: guides/github_reference.md
       - Raspberry Pi Cheatsheet: guides/rpi_bash_reference.md
-      - BASH and Python Time Cheatsheet: guides/rpi_time_reference.md
-      - Markdown Cheatsheet: guides/markdown_reference.md
-
+      - BASH/Python Time Cheatsheet: guides/rpi_time_reference.md
   - 🛠️ Technical Setup:
       - GitHub Headless Page: setup/github_headless_page.md
       - Pc Access to GitHub via SSH: setup/github_ssh_pc_access.md

@@ -1,5 +1,3 @@
-# Raspberry Pi Bash Reference For krsmith436
-
 ## USE ALIAS TO MAKE IT AUTOMATIC
 If your Pi is "headless" (no monitor) and just sitting in a corner, you might get tired of SSHing into it just to type `git pull`.
 
