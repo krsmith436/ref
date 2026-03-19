@@ -1,0 +1,1623 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://krsmith436.github.io/ref/guides/github_reference/">
+      
+      
+        <link rel="prev" href="../mkdocs_reference/">
+      
+      
+        <link rel="next" href="../rpi_bash_reference/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>GitHub Cheatsheet - krsmith436 Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#daily-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="krsmith436 Knowledge Base" class="md-header__button md-logo" aria-label="krsmith436 Knowledge Base" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            krsmith436 Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GitHub Cheatsheet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mr/scarm/" class="md-tabs__link">
+          
+  
+  
+  🚂 Model Railroad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../markdown_reference/" class="md-tabs__link">
+          
+  
+  
+  📚 Reference Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../setup/github_headless_page/" class="md-tabs__link">
+          
+  
+  
+  🛠️ Technical Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="krsmith436 Knowledge Base" class="md-nav__button md-logo" aria-label="krsmith436 Knowledge Base" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    krsmith436 Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚂 Model Railroad
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🚂 Model Railroad
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mr/scarm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simple Computer Aided Railway Modeler (SCARM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Reference Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Reference Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown_reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs_reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MkDocs Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#daily-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAILY COMMANDS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE REPOSITORY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-local-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REMOVE LOCAL REPOSITORY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essential-branch-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESSENTIAL BRANCH COMMANDS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ESSENTIAL BRANCH COMMANDS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-local-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List all local branches:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-branches-local-and-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List all branches (local and remote):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a new branch:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-and-switch-to-a-new-branch-shorthand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create and switch to a new branch (shorthand):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-a-local-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete a local branch:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename-a-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rename a branch:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch-tips-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branch Tips and Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-create-branch-on-github-and-get-it-to-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORKFLOW: CREATE BRANCH ON GITHUB AND GET IT TO PI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-closing-issues-via-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORKFLOW: CLOSING ISSUES VIA COMMITS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-create-and-switch-to-a-local-branch-local-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORKFLOW: CREATE AND SWITCH TO A LOCAL BRANCH (local merge)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-create-and-switch-to-a-local-branch-remote-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORKFLOW: CREATE AND SWITCH TO A LOCAL BRANCH (remote merge)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INSTALL GIT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CONFIG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SETUP SSH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SETUP SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-you-accidentally-added-https-url-instead-of-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IF YOU ACCIDENTALLY ADDED "HTTPS" URL INSTEAD OF "SSH"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rpi_bash_reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raspberry Pi Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rpi_time_reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BASH/Python Time Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Technical Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ Technical Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/github_headless_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Headless Page with MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/github_ssh_pc_access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pc Access to GitHub with SSH Key-Based Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/rpi_ssh_pc_access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pc Access to Pi with SSH Key-Based Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#daily-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAILY COMMANDS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE REPOSITORY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-local-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REMOVE LOCAL REPOSITORY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essential-branch-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESSENTIAL BRANCH COMMANDS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ESSENTIAL BRANCH COMMANDS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-local-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List all local branches:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-all-branches-local-and-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List all branches (local and remote):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a new branch:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-and-switch-to-a-new-branch-shorthand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create and switch to a new branch (shorthand):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-a-local-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete a local branch:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename-a-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rename a branch:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch-tips-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branch Tips and Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-create-branch-on-github-and-get-it-to-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORKFLOW: CREATE BRANCH ON GITHUB AND GET IT TO PI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-closing-issues-via-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORKFLOW: CLOSING ISSUES VIA COMMITS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-create-and-switch-to-a-local-branch-local-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORKFLOW: CREATE AND SWITCH TO A LOCAL BRANCH (local merge)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-create-and-switch-to-a-local-branch-remote-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WORKFLOW: CREATE AND SWITCH TO A LOCAL BRANCH (remote merge)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INSTALL GIT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CONFIG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SETUP SSH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SETUP SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-you-accidentally-added-https-url-instead-of-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IF YOU ACCIDENTALLY ADDED "HTTPS" URL INSTEAD OF "SSH"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>GitHub Cheatsheet</h1>
+
+<div class="admonition danger">
+<p class="admonition-title">Critical</p>
+<p>Never use "sudo" for git commands!</p>
+</div>
+<h2 id="daily-commands">DAILY COMMANDS</h2>
+<ul>
+<li>git pull: Download &amp; Merge the latest changes from GitHub to your Pi.</li>
+<li>git add . : Tell Git to track the changes you just made.</li>
+<li>git commit -m "Fixed a bug": Save those changes locally with a note.</li>
+<li>git push: Send those saved changes up to GitHub.</li>
+<li>git log --oneline: Clean list of every "save point" you’ve created so far.</li>
+</ul>
+<h2 id="create-repository">CREATE REPOSITORY</h2>
+<p>Before you touch the Pi, GitHub needs to know where the code is going.
+1. Log into GitHub and click the + icon in the top right -&gt; New repository.
+2. Give it a name (it doesn't have to match your folder name, but it helps).
+3. Important: Do not check "Initialize this repository with a README, .gitignore, or license." Leave it completely empty.
+4. Click Create repository.
+5. On your empty GitHub repository page, make sure the SSH button is selected (not HTTPS). The URL should look like <code>git@github.com:krsmith436/repo-name.git</code>.
+6. Go to your pi and create a file named ".gitignore" in your project's root directory.
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>.gitignore<span class="w"> </span>
+</code></pre></div></p>
+<ol>
+<li>
+<p>Paste the content below and exit/save (^X).
+<div class="highlight"><pre><span></span><code># Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+.env
+
+# Raspberry Pi / OS specific
+.DS_Store
+Thumbs.db
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Log files
+*.log
+
+# Any other files/folders 
+</code></pre></div></p>
+</li>
+<li>
+<p>Enter these commands:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/your-project-folder
+git<span class="w"> </span>init<span class="w">                        </span><span class="c1"># This creates a hidden &quot;.git&quot; folder that starts tracking your changes.</span>
+git<span class="w"> </span>add<span class="w"> </span>.<span class="w">                       </span><span class="c1"># Add all files in the current folder, don&#39;t forget &#39;.&#39; at the end</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
+git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main<span class="w">              </span><span class="c1"># Rename your default branch to main</span>
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>git@github.com:krsmith436/your-repo-name.git
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span>
+</code></pre></div></p>
+</li>
+<li>NOTE 1: The "-u" flag remembers your preferences, so next time you want to upload changes, you only have to type "git push".</li>
+<li>NOTE 2: If there is a problem with pushing due to permission, <br>
+a) verify USER is not owner of all files being pushed. <br>
+b) change ownership of all files to USER.
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="nv">$USER</span>:<span class="nv">$USER</span><span class="w"> </span>.<span class="w">     </span><span class="c1"># Don&#39;t forget &#39;.&#39; at the end </span>
+</code></pre></div></li>
+</ol>
+<h2 id="remove-local-repository">REMOVE LOCAL REPOSITORY</h2>
+<p>This removes only the <code>.git</code> folder, leaving your source code intact but removing all git history and repository metadata.</p>
+<blockquote>
+<p>On macOS/Linux:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/your-project-folder
+rm<span class="w"> </span>-rf<span class="w"> </span>.git
+</code></pre></div>
+On Windows (PowerShell):
+<div class="highlight"><pre><span></span><code><span class="nb">Remove-Item</span> <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="n">C</span><span class="p">:\</span><span class="n">path</span><span class="p">\</span><span class="n">to</span><span class="p">\</span><span class="n">repository</span>
+</code></pre></div>
+Remove-rf flag (<code>-r</code> = recursive, <code>-f</code> = force) deletes the directory and all its contents, including the <code>.git</code> folder.</p>
+</blockquote>
+<h2 id="essential-branch-commands">ESSENTIAL BRANCH COMMANDS</h2>
+<h4 id="list-all-local-branches">List all local branches:</h4>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch
+</code></pre></div>
+This shows all local branches, with the current branch marked with an asterisk (*).</p>
+<h4 id="list-all-branches-local-and-remote">List all branches (local and remote):</h4>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-a
+</code></pre></div>
+<h4 id="create-a-new-branch">Create a new branch:</h4>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>feature/user-auth
+</code></pre></div>
+This creates a new branch called <code>feature/user-auth</code> but doesn't switch to it.</p>
+<h4 id="create-and-switch-to-a-new-branch-shorthand">Create and switch to a new branch (shorthand):</h4>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-b<span class="w"> </span>feature/user-auth
+</code></pre></div>
+<h4 id="delete-a-local-branch">Delete a local branch:</h4>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature/user-auth
+</code></pre></div>
+Use <code>-D</code> to force delete if the branch hasn't been merged.</p>
+<h4 id="rename-a-branch">Rename a branch:</h4>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>old-branch-name<span class="w"> </span>new-branch-name
+</code></pre></div>
+<hr />
+<h4 id="branch-tips-and-best-practices">Branch Tips and Best Practices</h4>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git branch -v</code></td>
+<td>Show branches with their latest commits</td>
+</tr>
+<tr>
+<td><code>git branch --merged</code></td>
+<td>Show branches that have been merged into the current branch</td>
+</tr>
+<tr>
+<td><code>git branch --no-merged</code></td>
+<td>Show branches that haven't been merged yet</td>
+</tr>
+<tr>
+<td><code>git log --graph --oneline --all</code></td>
+<td>Visualize branch history</td>
+</tr>
+<tr>
+<td><code>git reflog</code></td>
+<td>View all branch changes (useful for recovery)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="workflow-create-branch-on-github-and-get-it-to-pi"><mark>WORKFLOW: CREATE BRANCH ON GITHUB AND GET IT TO PI</mark></h2>
+<p><strong>Part 1: Create a Branch on GitHub</strong>
+1. Go to your repository on github.com
+2. Click the branch dropdown (currently showing your default branch, usually "main")
+3. Type a new branch name
+4. Click "Create branch: [name]"</p>
+<p><strong>Part 2: Get the Branch on Your Raspberry Pi</strong>
+1. Clone the repository (if you haven't already):
+   <div class="highlight"><pre><span></span><code><span class="c1"># SSH (requires SSH key setup)</span>
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:username/repo-name.git
+
+<span class="c1"># Or HTTPS</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/username/repo-name.git
+</code></pre></div></p>
+<ol>
+<li>
+<p>Navigate to the repository:
+   <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>repo-name
+</code></pre></div></p>
+</li>
+<li>
+<p>Fetch all branches from GitHub:
+   <div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>origin
+</code></pre></div></p>
+</li>
+<li>
+<p>Check out your new branch:
+   <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>my-new-branch
+</code></pre></div></p>
+</li>
+<li>
+<p>Verify you're on the correct branch:
+   <div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch
+<span class="c1"># Should show:</span>
+<span class="c1"># * my-new-branch</span>
+<span class="c1">#   main</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h2 id="workflow-closing-issues-via-commits"><mark>WORKFLOW: CLOSING ISSUES VIA COMMITS</mark></h2>
+<p>GitHub has a feature called "Autolinked references." You can close an issue automatically just by writing a specific message in your Git commit on the Pi.</p>
+<p>When you are ready to commit the fix:</p>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Fixed the timeout logic. Closes #1&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<strong>What happens:</strong> As soon as you push, GitHub sees the keywords <strong>"Closes #1"</strong> (or "Fixes #1"), links the commit to Issue #1, and automatically marks the issue as <strong>Closed</strong>.</p>
+<h2 id="workflow-create-and-switch-to-a-local-branch-local-merge"><mark>WORKFLOW: CREATE AND SWITCH TO A LOCAL BRANCH (local merge)</mark></h2>
+<ol>
+<li>Instead of working on main, create a "feature" branch. Let’s call it ble-fix.
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>ble-fix
+</code></pre></div></li>
+<li>The <code>-b</code> flag tells Git to <strong>create</strong> the branch.</li>
+<li>
+<p><code>checkout</code> tells Git to <strong>switch</strong> your workspace to that branch.</p>
+</li>
+<li>
+<p>Make Your Changes.
+<div class="highlight"><pre><span></span><code><span class="c1"># After editing your files...</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Testing new Bluetooth connection logic&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;Implement new feature&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Switch Back to Main<br>
+Once you’re happy with the changes and have verified the script works, you need to return to the <strong>main</strong> branch to bring those changes over.
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+</code></pre></div>
+<strong>Note:</strong> If you look at your files now, your changes will "disappear." Don't panic! They are safely tucked away in the <strong>ble-fix</strong> branch.</p>
+</li>
+<li>
+<p>Merge the Changes<br>
+Now, pull the work from <strong>ble-fix</strong> into <strong>main</strong>.
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>merge<span class="w"> </span>ble-fix
+</code></pre></div></p>
+</li>
+</ol>
+<p>Git will usually perform a "Fast-forward" merge, essentially sliding the <strong>main</strong> pointer up to where your <strong>ble-fix</strong> pointer is.</p>
+<ol>
+<li>Clean Up and Push<br>
+Since the <strong>ble-fix</strong> branch is now part of <strong>main</strong>, you don't really need the "side-car" branch anymore.
+<div class="highlight"><pre><span></span><code><span class="c1"># Delete the local feature branch</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>ble-fix
+
+<span class="c1"># Push the updated main branch to GitHub</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div></li>
+</ol>
+<h2 id="workflow-create-and-switch-to-a-local-branch-remote-merge"><mark>WORKFLOW: CREATE AND SWITCH TO A LOCAL BRANCH (remote merge)</mark></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a feature branch from main</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/new-feature
+
+<span class="c1"># Make changes and commit</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Implement new feature&quot;</span>
+
+<span class="c1"># Push to remote</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/new-feature
+
+<span class="c1"># Create a pull request on GitHub/GitLab</span>
+<span class="c1"># After review and approval, merge on the remote</span>
+
+<span class="c1"># Clean up locally</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span><span class="c1"># Download &amp; Merge</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature/new-feature
+</code></pre></div>
+<h2 id="install-git">INSTALL GIT</h2>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>-y
+git<span class="w"> </span>--version
+</code></pre></div>
+<h2 id="config">CONFIG</h2>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;krsmith436&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;krsmith436@att.net&quot;</span><span class="w"> </span>
+</code></pre></div>
+<h2 id="setup-ssh">SETUP SSH</h2>
+<ol>
+<li>
+<p>Check for existing keys
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-al<span class="w"> </span>~/.ssh<span class="w"> </span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Generate a new key: <code>ssh-keygen -t ed25519 -C "krsmith436@att.net"</code><br>
+(Press Enter to accept the default file location and skip the passphrase if you want it to be easy).</p>
+</li>
+<li>
+<p>Add your key to the SSH Agent:
+<div class="highlight"><pre><span></span><code><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span>~/.ssh/id_ed25519<span class="w"> </span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Copy your public key:
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>~/.ssh/id_ed25519.pub<span class="w"> </span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Add it to GitHub: https://github.com/settings/keys</p>
+</li>
+<li>Click New SSH Key, give it a title (like "My Raspberry Pi").</li>
+<li>Paste the text you copied from your terminal</li>
+<li>Click Add SSH key.</li>
+<li>Test the connection
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-T<span class="w"> </span>git@github.com<span class="w"> </span>
+</code></pre></div></li>
+</ol>
+<p>You’ll see a warning about the authenticity of the host.<br>
+Type <code>yes</code> and hit <strong>Enter</strong>. All is well if you see:</p>
+<blockquote>
+<p><em>"Hi [YourUsername]! You've successfully authenticated..."</em></p>
+</blockquote>
+<h3 id="if-you-accidentally-added-https-url-instead-of-ssh">IF YOU ACCIDENTALLY ADDED "HTTPS" URL INSTEAD OF "SSH"</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:krsmith436/your-repo-name.git<span class="w"> </span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.share", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
