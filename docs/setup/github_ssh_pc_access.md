@@ -1,3 +1,7 @@
+Setup **SSH Key-Based Authentication** to replace the password prompt with a digital "handshake" between a private key on your Windows PC and a public key on GitHub.
+
+---
+
 ## 1. Generate an SSH key
 Right-click on PowerShell or Command Prompt and select **Run as Administrator**:
 ```powershell
