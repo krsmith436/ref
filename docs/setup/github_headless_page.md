@@ -4,7 +4,7 @@ Setting up a "headless" site means your repository contains the raw Markdown fil
 
 ## 1. Project Initialization
 
-First, create the local structure for your documentation.
+First, create the local structure on your Windows 11 pc for your documentation.
 
 * **Install:** Run `python -m pip install mkdocs-material`.
 * **Create:** Run `mkdocs new my-docs` to create the `my-docs` folder and generate the default files.

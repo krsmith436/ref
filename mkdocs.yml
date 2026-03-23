@@ -33,3 +33,4 @@ nav:
       - GitHub Headless Page with MkDocs: setup/github_headless_page.md
       - Pc Access to GitHub with SSH Key-Based Authentication: setup/github_ssh_pc_access.md
       - Pc Access to Pi with SSH Key-Based Authentication: setup/rpi_ssh_pc_access.md
+      - Setup Pc SSH config File: setup/setup_pc_ssh_config_file.md
