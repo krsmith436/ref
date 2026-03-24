@@ -29,6 +29,7 @@ nav:
       - GitHub Cheatsheet: guides/github_reference.md
       - Raspberry Pi Cheatsheet: guides/rpi_bash_reference.md
       - BASH/Python Time Cheatsheet: guides/rpi_time_reference.md
+      - Windows PowerShell Reference: http://go.microsoft.com/fwlink/?LinkID=108518
   - 🛠️ Technical Setup:
       - GitHub Headless Page with MkDocs: setup/github_headless_page.md
       - Pc Access to GitHub with SSH Key-Based Authentication: setup/github_ssh_pc_access.md

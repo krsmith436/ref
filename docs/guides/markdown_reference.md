@@ -2,7 +2,9 @@
 
 ## Emojis
 
-🔗 📂 🕒 💻 🧭 💡 → 🖥 ⭐ ⚙️ 
+| 🔗 [Emojipedia](https://emojipedia.org/) |
+
+🔗 📂 🕒 💻 🧭 💡 → ⬆️ ⬇️ 🖥 ⭐ ⚙️ 
 
 ## Adding "Admonitions" with MkDocs
 You can highlight "Notes" or "Warnings." Material for MkDocs has a great feature for this.
