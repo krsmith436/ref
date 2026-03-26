@@ -10,10 +10,13 @@
 | ⬇️ | Recall next command |
 | `~` | /home/krsmith436 |
 | `$` | Normal user |
-| `#` | root user |
+| `#` | Root user |
 | `exit` | End session |
 | `Ctrl+D` | End session |
 | `nano` | Simple text editor |
+| `mousepad` | Simple text editor |
+| `touch` | Create a new file |
+| `ls -al | List files; hidden, permissions, sizes |
 
 ### My Scripts
 
@@ -34,11 +37,11 @@
 
 | Command | Meaning |
 | ---- | ---- |
-| `sudo systemctl start mosquitto` | Start the `mosquitto`, for example, service |
-| `sudo systemctl stop mosquitto` | Stop the `mosquitto` service, to bebug |
-| `sudo systemctl disable mosquitto` | To not start the `mosquitto` service automatically at boot |
-| `sudo systemctl enable mosquitto` | To start the `mosquitto` service automatically at boot |
-| `sudo systemctl status mosquitto` | Displays status of the `mosquitto` service |
+| `sudo systemctl start service_name` | Start the `service_name` service |
+| `sudo systemctl stop service_name` | Stop the `service_name` service, to bebug |
+| `sudo systemctl disable service_name` | To not start the `service_name` service automatically at boot |
+| `sudo systemctl enable service_name` | To start the `service_name` service automatically at boot |
+| `sudo systemctl status service_name` | Displays status of the `service_name` service |
 
 !!! tip "Tip for mosquitto service"
     Use the `no-pager` option. If you forget, enter `q` to quit if it doesn't automatically.
@@ -61,4 +64,3 @@ alias update-pi='cd ~/btferret && git pull && sudo python3 main.py'
 (Save and exit, then run `source ~/.bashrc`)
 
 Now, whenever you type `update-pi`, your Pi will automatically grab the latest code and start the script.
-
