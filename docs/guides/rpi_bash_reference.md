@@ -16,7 +16,7 @@
 | `nano` | Simple text editor |
 | `mousepad` | Simple text editor |
 | `touch` | Create a new file |
-| `ls -al | List files; hidden, permissions, sizes |
+| `ls -al` | List files; hidden, permissions, sizes |
 
 ### My Scripts
 
