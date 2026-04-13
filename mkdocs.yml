@@ -31,7 +31,6 @@ nav:
       - BASH/Python Time Cheatsheet: guides/rpi_time_reference.md
       - Windows PowerShell Reference: http://go.microsoft.com/fwlink/?LinkID=108518
   - 🛠️ Technical Setup:
+      - Setup for new Pi on SHSF: setup/new_pi_on_shsf.md
       - GitHub Headless Page with MkDocs: setup/github_headless_page.md
-      - Pc Access to GitHub with SSH Key-Based Authentication: setup/github_ssh_pc_access.md
-      - Pc Access to Pi with SSH Key-Based Authentication: setup/rpi_ssh_pc_access.md
-      - Setup Pc SSH config File: setup/setup_pc_ssh_config_file.md
+      - Setup SSH Key-Based Authentication: setup/setup_ssh_key_based_authentication.md

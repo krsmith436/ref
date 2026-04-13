@@ -1,3 +1,5 @@
+| 🔗 [GitHub Docs](https://docs.github.com/) |
+
 !!! danger "Critical"
     Never use "sudo" for git commands!
 
@@ -64,6 +66,36 @@ b) change ownership of all files to USER.
 ``` Bash
 sudo chown -R $USER:$USER .     # Don't forget '.' at the end 
 ```
+
+## CLONE REPOSITORY
+To clone a repository from GitHub into a local computer.
+
+```Bash
+git clone <repository_url> <target_directory_name>
+```
+
+!!! question "Is `.git` required in the repository url?"
+	Most modern Git hosting services (like GitHub, GitLab, and Bitbucket) are smart enough to handle the URL whether the .git extension is present or not.  However, there are a few nuances depending on how you are interacting with the repository, so it is best to include/leave it.
+
+* **Default Behavior:**
+    `git clone https://github.com/user/my-cool-project.git`
+    *Creates a folder named `my-cool-project`.*
+
+* **Custom Folder Name:**
+    `git clone https://github.com/user/my-cool-project.git custom-name`
+    *Creates a folder named `custom-name`.*
+
+* **Cloning into the Current Directory:**
+    `git clone https://github.com/user/my-cool-project.git .`
+    *Note: The dot (`.`) tells Git to put the files directly into your current folder without creating a sub-directory. **Warning:** This only works if the current folder is empty.*
+
+!!! question "Why would you do this?"
+	1.  **Organization:** You might have multiple versions of the same project (e.g., `project-stable` and `project-experiment`).
+	2.  **Shortcuts:** The original repo name might be long or difficult to type, and you want something snappier for your local environment.
+	3.  **Conflict Prevention:** You already have a folder with that name in your directory and don't want to overwrite it.
+
+!!! tip "Tip"
+	Changing the folder name locally does **not** change the name of the repository on GitHub or affect your ability to push/pull. Git keeps track of the remote URL regardless of what your local folder is called.
 
 ## REMOVE LOCAL REPOSITORY
 This removes only the `.git` folder, leaving your source code intact but removing all git history and repository metadata.

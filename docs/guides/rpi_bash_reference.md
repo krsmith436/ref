@@ -17,6 +17,8 @@
 | `mousepad` | Simple text editor |
 | `touch` | Create a new file |
 | `ls -al` | List files; hidden, permissions, sizes |
+| `ip addr` | Show IP address and interface details |
+| `hostname -I` | Show Pi’s local IP address |
 
 ### My Scripts
 
