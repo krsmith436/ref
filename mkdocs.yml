@@ -23,6 +23,7 @@ nav:
   - 🏠 Home: index.md
   - 🚂 Model Railroad:
       - Simple Computer Aided Railway Modeler (SCARM): mr/scarm.md
+      - MQTT Comminications: mr/shsf_mqtt_hierarchy.md
   - 📚 Reference Guides:
       - Markdown Cheatsheet: guides/markdown_reference.md
       - MkDocs Cheatsheet: guides/mkdocs_reference.md

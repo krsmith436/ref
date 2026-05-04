@@ -6,6 +6,13 @@
 
 🔗 📂 🕒 💻 🧭 💡 → ⬆️ ⬇️ 🖥 ⭐ ⚙️ 
 
+## Non-breaking Space Character
+If you do not want extra space characters to be stipped, use the non-breaking space character.
+
+```markdown
+&nbsp;
+```
+
 ## Adding "Admonitions" with MkDocs
 You can highlight "Notes" or "Warnings." Material for MkDocs has a great feature for this.
 
