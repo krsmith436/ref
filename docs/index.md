@@ -18,7 +18,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 * **`mr/`**: SHSF documentation.
 * **`guides/`**: Procedural walkthroughs and cheatsheets.
 * **`setup/`**: Technical installation and configuration logs.
-
+* **`img/`**: Images (.png) for documents, logo.png and favicon.ico files.
 
 
 ### Key Features:

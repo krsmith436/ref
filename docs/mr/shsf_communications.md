@@ -1,6 +1,6 @@
-Message Queuing Telemetry Transport (MQTT) is a Client Server publish/subscribe messaging transport protocol. It is light weight, open, simple, and designed to be easy to implement.
+## MQTT Message Table
 
-## 1. SHSF MQTT Message Table
+Message Queuing Telemetry Transport (MQTT) is a Client Server publish/subscribe messaging transport protocol. It is light weight, open, simple, and designed to be easy to implement.
 
 | Topic                             | Direction | QoS | Description |
 |-----------------------------------|:---------:|:---:|-------------|
@@ -18,3 +18,23 @@ Message Queuing Telemetry Transport (MQTT) is a Client Server publish/subscribe 
 | shsf/acer\_laptop/responses       |  Pub      | 0   | Smiths Valley responses to Acer Laptop |
 | shsf/heartbeat                    |  Pub      | 0   | Heartbeat sent every 10 seconds |
 | *shsf/+/commands*                 |  *Sub*    | *0* | *Commands to Smiths Valley from ALL devices* |
+
+## Smiths Valley Commands
+
+| Command | Options | Description |
+| :---: | :---: | ---|
+| `t`  | n | Toggle turnout number (n) 1-16 |
+| `ta` | n,r | Set all turnouts NORMAL (n) or REVERSE \(r) |
+| `b` | n | Toggle block number (n) 1-8 |
+| `ba` | o,f | Set all blocks ON(o) or OFF(f) |
+| `c`  | n | Toggle cab number (n) 1-8 |
+| `ca` | a,b | Set all cabs to A(a) or B(b)|
+| `mp` | | Move pipe unloader |
+| `a`  | | All Abord sound clip |
+| `h`  | | Diesel Horn sound clip |
+| `w`  | | Whistle sound clip |
+| `cc` | | Click clack train track sound clip |
+| `v`  | | Display Vin and Vaccs values |
+| `f`  | | Fault Status Report |
+| `vn` | | Version number of software |
+| `?`  | | Help, shows this list |
