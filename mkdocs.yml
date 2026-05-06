@@ -24,6 +24,7 @@ nav:
   - 🚂 Model Railroad:
       - Simple Computer Aided Railway Modeler (SCARM): mr/scarm.md
       - SHSF Communications: mr/shsf_communications.md
+      - Tiny Code (QR) Reader Guide: mr/tiny_code_reader.md
   - 📚 Reference Guides:
       - Markdown Cheatsheet: guides/markdown_reference.md
       - MkDocs Cheatsheet: guides/mkdocs_reference.md
