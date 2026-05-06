@@ -137,23 +137,23 @@ adding it to this section of the documentation. We also collect maker guides at
 
 QR code format:
 
-| Parameter | Characters |
-| :--- | :---: |
-|engine number | 4 |
-|road abbreviation | 4 |
-|step value | 3 |
-|min forward | 4 |
-|max forward | 4 |
-|min reverse | 5 (due to minus sign) |
-|max reverse | 5 (due to minus sign) |
-|engine facing | 1 |
+| Parameter | Characters | Example Value |
+| :--- | :---: | :---: |
+|engine number | 4 | 200C |
+|road abbreviation | 4 | ATSF |
+|step value | 3 | 075 |
+|min forward | 4 | 0400 |
+|max forward | 4 | 2500 |
+|min reverse | 5 (due to minus sign) | -0400 |
+|max reverse | 5 (due to minus sign) | -1500 |
+|engine facing | 1 | 1 |
 
 ### Go to https://www.qrcode-monkey.com/
 
 - Complete the following:
 
 ```text
-Content: 2000000007504002500-400-1500E
+Content: 200CATSF07504002500-0400-15001
 Color: #129C16
 Background Color: #FFFFFF
 Image: sh&sf_logo_white_space.jpg
