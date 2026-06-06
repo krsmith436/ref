@@ -36,3 +36,4 @@ nav:
       - Setup for new Pi on SHSF: setup/new_pi_on_shsf.md
       - GitHub Headless Page with MkDocs: setup/github_headless_page.md
       - Setup SSH Key-Based Authentication: setup/setup_ssh_key_based_authentication.md
+      - Setup Wii Nunchuck as a Pi mouse: setup/wii_nunchuck_as_pi_mouse.md
