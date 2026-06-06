@@ -5,8 +5,8 @@ Using a Wii Nunchuck as a mouse on a Pi comes down to three things: the Nunchuck
 The Nunchuck runs on 3.3V, which matches the Pi's I2C levels, so no level shifting is needed.<br>
 A **XYAB 3rd Party Nunchuck** from **Retro-Taku Videogames Walled Lake** is being used.
 
-Connect to the Pi's 40-pin header and Nunchuck:
-| Signal | Pi 40-pin | Amp 4-pin | Nunchuck Wire Color |
+Connect to the Pi's 40\-pin header and Nunchuck:
+| Signal | Pi 40\-pin | Amp 4\-pin | Nunchuck Wire Color |
 | :--- | :---: | :---: | :--- |
 | **3.3V** | 1 | 2 | Red & Black | 
 | **GND** | 6 | 1 | Green |
