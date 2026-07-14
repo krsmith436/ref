@@ -37,3 +37,4 @@ nav:
       - GitHub Headless Page with MkDocs: setup/github_headless_page.md
       - Setup SSH Key-Based Authentication: setup/setup_ssh_key_based_authentication.md
       - Setup Wii Nunchuck as a Pi mouse: setup/wii_nunchuck_as_pi_mouse.md
+      - Setup GPIO Power-Off and Act-LED on Pi 5: setup/setup_gpio_poweroff.md
