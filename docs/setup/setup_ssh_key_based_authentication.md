@@ -5,6 +5,8 @@ Setup **SSH Key-Based Authentication** to replace the password prompt with a dig
 
 ## 1. Generate an SSH Key Pair on Local host
 
+### a) On Windows Pc
+
 Right-click on PowerShell or Command Prompt and select **Run as Administrator** to run the following command. When prompted to "Enter file in which to save the key," just press **Enter** to use the default location. You can also skip the passphrase by pressing **Enter** twice.
 
 ```powershell
@@ -19,7 +21,22 @@ This creates two files in your `.ssh` folder (usually `C:\Users\YourName\.ssh`):
 - `id_rsa`: Your **Private Key** (Keep this safe and never share it).
 - `id_rsa.pub`: Your **Public Key** (This is what we will give to the Remote host).
 
+### b) On Raspberry Pi
+
+```bash
+# For GitHub Remote host, enter:
+ssh-keygen -t ed25519 -C "krsmith436@att.net"
+```
+
+This creates two files in your `.ssh` folder (usually `/home/krsmith436/.ssh`):
+- `id_ed25519`: Your **Private Key** (Keep this safe and never share it).
+- `id_ed25519.pub`: Your **Public Key** (This is what we will give to the Remote host).
+
 ## 2. Start the SSH agent
+
+You only need to run this once, and the setting persists across reboots.
+
+### a) On Windows Pc
 
 ```powershell
 # Start the service
@@ -34,11 +51,18 @@ Command breakdown:
 - `|` - Pipes (sends) that service to the next command
 - `Set-Service -StartupType Automatic` - Changes its startup configuration to Automatic
 
-You only need to run this once, and the setting persists across reboots.
+### b) On Raspberry Pi
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
 
 ## 3. Copy the Public Key to the Remote host
 
-### a) For GitHub
+### a) On Windows Pc
+
+#### i) For GitHub
 
 - Copy the public key
 
@@ -52,7 +76,7 @@ You only need to run this once, and the setting persists across reboots.
 - Paste your public key and give it a title, i.e. `My Acer Pc`
 - Click "Add SSH key"
 
-### b) For Raspberry Pi
+#### ii) For Raspberry Pi
 
 Since Windows doesn't always have the `ssh-copy-id` tool found on Linux, the easiest way to do this via PowerShell is with this command (replace `username` and `<IP_ADDRESS>` with your details):
 
@@ -64,9 +88,27 @@ type $env:USERPROFILE\.ssh\id_rsa.pub | ssh username@<IP_ADDRESS> "mkdir -p ~/.s
 	- You will have to enter your password **one last time** to complete this step.
 	- This command takes your public key, logs into the Pi, creates the `.ssh` folder if it doesn't exist, and appends your key to the `authorized_keys` file.
 
+### b) On Raspberry Pi
+
+#### i) For GitHub
+
+- Copy the public key
+
+	```bash
+	cat ~/.ssh/id_ed25519.pub
+	```
+	Copy the entire output (starts with `ssh-ed25519`).
+
+- Go to GitHub.com → Settings → SSH and GPG keys
+- Click "New SSH key"
+- Paste your public key and give it a title, i.e. `My Raspberry Pi Zero`
+- Click "Add SSH key"
+
 ## 4. Test the connection
 
-### a) For GitHub
+### a) On Windows Pc
+
+#### i) For GitHub
 
 ```powershell
 ssh -T git@github.com
@@ -75,7 +117,7 @@ ssh -T git@github.com
 When asked, "The authenticity of host... can't be established. Are you sure you want to continue?", type `yes` and hit `Enter`.<br>
 You should then see, `Hi username! You've successfully authenticated...`
 
-### b) For Raspberry Pi
+#### ii) For Raspberry Pi
 
 Now, try to use `scp` or `ssh` again:
 
@@ -94,12 +136,29 @@ The file should transfer immediately without asking for a password.
 	- **Multiple Keys:** If you have multiple SSH keys on your Windows machine, you may need to specify which one to use with the `-i` flag:
 		`scp -i C:\Users\YourName\.ssh\id_rsa file.txt username@IP:/path/`
 
+### b) On Raspberry Pi
+
+#### i) For GitHub
+
+```bash
+ssh -T git@github.com
+```
+
+When asked, "The authenticity of host... can't be established. Are you sure you want to continue?", type `yes` and hit `Enter`.<br>
+You should then see, `Hi username! You've successfully authenticated...`
+
 ## 5. Use SSH for GitHub repositories
 
 When cloning, use the SSH URL:
 
 ```powershell
 git clone git@github.com:username/repository.git
+```
+
+If you already have a repo cloned via HTTPS and want to switch it to SSH:
+
+```powershell
+git remote set-url origin git@github.com:krsmith436/your-repo-name.git
 ```
 
 ## 6. Setup the SSH config File
