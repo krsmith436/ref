@@ -50,3 +50,59 @@ Simplest path is to run the script with `sudo`. If you'd rather run it as your n
 A couple of notes on how it works: the init sequence (`0xF0 0x55`, `0xFB 0x00`) disables the Nunchuck's data encryption, so the six data bytes can be read straight without decoding. Byte 0 and 1 are joystick X/Y (center ≈ 128), and byte 5 holds the C and Z button bits. I mapped Z (the big trigger) to left-click and C to right-click.Run it with `sudo python3 nunchuck_mouse.py` and the joystick will drive the pointer, Z is left-click, C is right-click. Tweak `SPEED` and `DEADZONE` at the top to get the feel right.
 
 A few things worth knowing: the joystick center isn't always exactly 128, so if the pointer drifts when you're not touching it, print `joy_x, joy_y` at rest and adjust `CENTER` (or bump `DEADZONE`). To launch it automatically at boot, wrap it in a small systemd service. And if you later want the accelerometer too (for tilt-based movement), bytes 2–4 hold the X/Y/Z acceleration with the low bits packed into byte 5.
+
+## 6. Run script at boot
+
+A systemd service is the clean way to do this — it starts the script at boot, restarts it if it ever crashes, and gives you logs.
+
+1. Copy the Python script to my `/bin` folder:
+
+    ```bash
+    sudo cp nunchuck_mouse.py ~/bin/
+    ```
+
+1. Create the `nunchuck-mouse.service` file with the following content:
+    ```bash
+    [Unit]
+    Description=Wii Nunchuck as mouse
+    After=multi-user.target
+
+    [Service]
+    Type=simple
+    # Make sure the virtual-input kernel module is loaded before we start.
+    ExecStartPre=/sbin/modprobe uinput
+    ExecStart=/usr/bin/python3 /home/krsmith436/bin/nunchuck_mouse.py
+    Restart=on-failure
+    RestartSec=3
+
+    [Install]
+    WantedBy=multi-user.target
+    ```
+1. Copy the `.service` file to my `/bin` folder:
+
+    ```bash
+    sudo cp nunchuck-mouse.service ~/bin/
+    ```
+
+1. Install and enable the service:
+
+    ```bash
+    sudo systemctl daemon-reload
+    sudo systemctl enable nunchuck-mouse.service
+    sudo systemctl start nunchuck-mouse.service
+    ```
+    The `enable` line is what makes it launch on every boot; the `start` line runs it right now so you can test without rebooting. 
+
+1. Check that it's running with:
+
+    ```bash
+    sudo systemctl status nunchuck-mouse.service
+    ```
+
+1. To stop it launching at boot later, 
+    ```
+    sudo systemctl disable --now nunchuck-mouse.service
+    ```
+    
+!!! note "If something's wrong"
+    `journalctl -u nunchuck-mouse -f` shows the script's output and any errors live.
